@@ -1,0 +1,24 @@
+---
+layout: blog
+title: Cassandra
+permalink: /cassandra/
+---
+
+<div class="row">
+    <div class="col-lg-12 text-center">
+        <div class="navy-line"></div>
+        <h1>Cassandra</h1>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content  animated fadeInRight blog">
+    <div class="row">
+		<ul id="pag-itemContainer" style="list-style:none;">
+		{% for post in site.categories['cassandra'] %}
+		<li>
+            {% include permalink_page.html %}
+        </li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>

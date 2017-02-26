@@ -1,0 +1,63 @@
+--- 
+layout: default 
+---
+
+<div class="wrapper wrapper-content  animated fadeInRight article">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <div class="pull-left">
+                        {% for category in page.categories %}
+                        <button class="btn btn-white btn-xs" type="button">{{ category }}</button> {% endfor %}
+                    </div>
+                    <div class="text-center article-title">
+                        <h1>
+                            {{ page.title }}
+                        </h1>
+                        <span class="text-muted"><i class="fa fa-clock-o"></i> {{ page.date | date: "%-d %b %Y" }}</span>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-10">
+                            {{ content }}
+                        </div>
+                         <div class="col-md-2">
+                            {% include right_pane.html %}
+                        </div>   
+                    </div>
+
+                    <div id="post-nav">
+                        <div class="pull-left">
+                            {% if page.previous.url %}
+                            <a class="prev btn btn-default" href="{{page.previous.url}}">
+                                <span>{{page.previous.title}}</span>
+                            </a>
+                            {% endif %}
+                        </div>
+
+                        <div class="pull-right">
+                            {% if page.next.url %}
+                            <a class="next btn btn-default" href="{{page.next.url}}">
+                                <span>{{page.next.title}}</span>
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div>
+                        {% include page_tags.html %}
+                    </div>
+                    <br /> 
+                    <div>
+                        {% include social_share.html %}
+                    </div>
+                    <div>
+                        {% include comments.html %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

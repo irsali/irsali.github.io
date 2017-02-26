@@ -1,0 +1,31 @@
+{% if site.data.environment.environment == "production" %}
+
+<div class="row">
+  <div class=col-md-12>
+    <div id="fb-root"></div>
+    
+    <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script> 
+
+share this post :
+    <a class="twitter-share-button" target="_blank" href='https://twitter.com/intent/tweet?text="{{page.title}}%20https:{{ site.url }}{{ page.url }}"'
+      data-size="small">
+      Tweet
+    </a>
+
+    <script src="//platform.linkedin.com/in.js" async type="text/javascript"> lang: en_US</script>
+    <script type="IN/Share" data-url="{{ site.url }}{{ page.url }}"></script>
+
+    <div class="fb-share-button" data-href="{{ site.url }}{{ page.url }}" data-layout="button" data-mobile-iframe="false">
+      <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }};src=sdkpreparse"></a>
+    </div>
+
+  </div>
+</div>
+
+{% endif %}

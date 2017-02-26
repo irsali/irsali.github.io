@@ -1,0 +1,99 @@
+# Welcome to Jekyll!
+
+# Website settings
+title: "Irshad Ali"
+description: "Irshad Ali, Technichal blog"
+keywords: "Irshad, Ali, profile, south, delhi, india, programmer, resume, blog, Jekyll, github, gh-pages, Technichal, csharp, microsoft, software, web, developer, engineer,"
+baseurl: "/"
+url: "//irsali.github.io"
+
+# blog img path
+img_path: "http://www.jack003.com/static/img/blog"
+
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# author
+author:
+  name: 'Irshad Ali'
+  first_name: 'Irshad'
+  last_name: 'Ali'
+  email: 'text.irshad@gmail.com'
+  facebook_username: 'irshad.ali.007'
+  twitter_account: 'irsali'
+  linkedin_account:  'irshad-ali'
+  github_username: 'irsali'
+  head_img: 'static/img/landing/irshad.jpg'
+
+# social link
+social_link:
+  first_name: 'Irshad'
+  last_name: 'Ali'
+  description: 'Irshad Ali, Technichal blog'
+  link: 'https://www.linkedin.com/in/irshad-ali'
+  email: 'text.irshad@gmail.com'
+  resume-link: 'https://irsali/github.io/static/Irshad_Resume.doc' 
+
+# landing page
+landing:
+  home: 'Home'
+  about: 'About'
+  career: 'Career'
+  skills: 'Skills'
+  blog: 'Blog'
+  link: 'Link'
+
+# blog index
+index:
+  home: 'Home'
+  csharp: 'C#'
+  mvc: 'Asp.Net MVC'
+  sqlserver: 'Sql Server'
+  cassandra: 'Cassandra'
+  elasticsearch: 'Elastic Search'
+  others: 'Others'
+
+# donate
+# donate:
+#   wechat: 'static/img/pay/wechat.png'
+ #  alipay: 'static/img/pay/alipay.png'
+
+# comment
+# changyan:
+  # appid: cysfY7ULn
+  # conf: prod_861928934cecb7a18e15bedaed9dae29
+disqus:
+  name: irsali
+  public_key: 3MwL0mMbyEycG24JVEllryeq8a7IagL5xh7hMbh06BJUnamKF5OLnpmcfsfXxVxV
+
+# share
+# bshare:
+ #  uuid: 513f778e-a8f7-4c20-9ec2-d29cc2328d75
+
+# baidu analytics
+# ba:
+#   uuid: 317acca9ef9255b934e46371e471431d
+
+# google analytics
+ga:
+  id: UA-84638701-1
+
+# google Addsense
+google_ad_client: "ca-pub-4596094993541452"
+
+
+# Build settings
+encoding: "utf-8"
+
+# other settings
+markdown: kramdown
+highlighter: rouge
+# kramdown:
+#  input: GFM
+#  syntax_highlighter: rouge
+
+# using github gist
+# gems: [jekyll-gist]
+gems:
+  - jekyll-seo-tag
+  - jekyll-paginate

@@ -1,0 +1,54 @@
+{
+  "website":{
+    "title": "Irshad's blog"
+  },
+  "nav":{
+    "home": "Home",
+    "about_me": "About",
+    "skills": "Skills",
+    "career": "Career",
+    "blog": "Blog",
+    "link": "Link"
+  },
+  "about_me":{
+    "about_me": "About Me",
+    "des": "A results-driven analytical software engineer that gets things done. Strong in design and integration problem solving skills. Expert in C# with knowledge of vast array technologies in web development."
+  },
+  "skills":{
+    "my_skills": "My Skills"
+  },
+  "projects":{
+    "my_projects": "My Projects",
+    "saplatform": "Saplatform is a automated service for operations, it has asset management, project release, database access function, it can control mass servers.",
+    "jalpc": "Jalpc is a simple, beautiful and swift theme for Jekyll. It has comprehensive function, it can be easily used and edited. It's adapted for many kinds devices.",
+    "angularjs": "It is a web font application written by Angularjs and deployed by Jekyll on github (gh-pages), the backend platform is Leancloud, you can use Parse as well.",
+    "rsser": "Rsser is an Ionic application, with this application we can read news and articles freely, you can add rss address from the given list and add it manually."
+  },
+  "career":{
+    "my_career": "My Career",
+    "bt": "Brain Technosys Pvt. Ltd.",
+    "bt_des": "Promoted to Sr. Software Engineer with a \"Impressive Initiator\" award.    Started to work on some awsome technologies like apache.ignite, Fody, QrCoder.    Developing a distributed in memory image cache using Apache.Ignite.    Weaving .net assemblies using Fody.    Creating dynamic QrCode with image overlay.    Developing a Validation Engine in C# and Typescript to control validation from excel.",
+    "bt_date": "till date",
+    "bt_job": "Sr. Software Engineer",
+    "btj": "Brain Technosys Pvt. Ltd.",
+    "btj_des": "Joined Brain Technosys as a Software Engineer.     Worked in a Sport and two Ecommerce web applications.    Developed web api with self testing suite.    Learned EAV design pattern, t4 templates, git, Web API, WCF, unit test, C# 6 features and various design patterns.    Extended my knowledge to ElasticSearch, Cassandra and Microsoft Logging.    ",
+    "btj_date": "May. 2015",
+    "btj_job": "Software Engineer",
+    "atg": "ATG Trans",
+    "atg_des": "Started my development career in .Net Technologies. Learned Asp.Net MVC with various aspects of web development.",
+    "atg_date": "Feb 2013",
+    "atg_job": "Software Engineer",
+    "college": "Gloxinia Infotech Pvt. Ltd.",
+    "college_des": "Joined Gloxinia as Faculty.",
+    "college_date": "",
+    "college_job": "Faculty"
+  },
+  "blog":{
+    "my_blog": "My Blog"
+  },
+  "link":{
+    "link": "Link",
+    "view": "views"
+  }
+
+}

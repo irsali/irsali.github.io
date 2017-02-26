@@ -1,0 +1,34 @@
+<div class="col-md-8 col-md-offset-2">
+    <div class="ibox">
+        <div class="ibox-content">
+            
+            <!-- Title -->
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="{{ post.url }}" class="btn-link">
+                        <h2>
+                            {{ post.title }}
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>{{ site.author.name }}</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> {{ post.date | date: "%-d %b %Y" }}</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Body -->
+            <div class="row">
+                
+                <!-- content -->
+                <div class="col-md-12">
+                    <div>
+                        {{ post.content | strip_html | truncate:100 }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tags and comment stats -->
+           {% include post_tags.html %}
+        </div>
+    </div>
+</div>
