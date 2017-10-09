@@ -23,7 +23,7 @@ Pre Requirement
     Otherwise, will echo a message: 'au' is not recognized as an
     internal or external command, operable program or batch file.
 
-    ![](media/image1.png){width="4.651388888888889in" height="1.6625in"}
+    ![](/static/img/blog/Aurelia/Aurelia-Startup_files/image001.jpg)
 
 Installations:
 --------------
@@ -38,13 +38,15 @@ Installations:
 
 For windows 64 click the circled link.
 
-![](media/image2.png){width="6.5in" height="3.398083989501312in"}
+![](/static/img/blog/Aurelia/Aurelia-Startup_files/image002.jpg)
 
 ##### Aurelia-cli
 
 On cmd and run below command
 
+```
 npm install aurelia-cli –g
+```
 
 Note: -g is used to install Aurelia-cli globally.
 
@@ -61,7 +63,9 @@ For aurelia project in .Net Core project, we do not want project folder
 to be created by aurelia-cli. For the same --here is used, otherwise do
 not use --here.
 
+```
 au new --here
+```
 
 Aurelia-cli will ask you several questions to setup project for you.
 
@@ -75,15 +79,15 @@ Below is my simple sample selection for Aurelia app
 
 when using SystemJS, Typescript, css.
 
-![](media/image3.png){width="6.5in" height="6.9705008748906385in"}
+![](/static/img/blog/Aurelia/Aurelia-Startup_files/image003.jpg)
 
 You can also choose custom
 
-![](media/image4.png){width="6.5in" height="6.922742782152231in"}
+![](/static/img/blog/Aurelia/Aurelia-Startup_files/image004.jpg)
 
 When you create Aurelia-app in .net core project.
 
-![](media/image5.png){width="6.5in" height="6.733183508311461in"}
+![](/static/img/blog/Aurelia/Aurelia-Startup_files/image005.jpg)
 
 After all steps. Aurelia-cli will install all dependencies.
 
@@ -98,9 +102,9 @@ Creating Asp.Net Core project
 I have assumed earlier that you Asp.Net core project is already created.
 But there is catch, so I am explaining it here before moving further.
 
-![](media/image6.png){width="6.5in" height="2.92496719160105in"}
+![](/static/img/blog/Aurelia/Aurelia-Startup_files/image006.jpg)
 
-![](media/image7.png){width="6.5in" height="4.095005468066492in"}
+![](/static/img/blog/Aurelia/Aurelia-Startup_files/image007.jpg)
 
 Install a package Microsoft.AspNetCore.StaticFiles as per your project
 target framework version number like for .NetCore 1.1 choose
@@ -115,6 +119,8 @@ folder).
 
 Use below lines in it.
 
+```
 app.UseDefaultFiles();
 
 app.UseStaticFiles();
+```

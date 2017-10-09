@@ -27,68 +27,70 @@ Install packages
 Breeze controller example
 -------------------------
 
-/// &lt;summary&gt;
+```
+/// <summary>
 
 /// Api that exposes data from breeze client
 
-/// &lt;/summary&gt;
+/// </summary>
 
-\[BreezeController\]
+[BreezeController]
 
-\[Route("breeze/\[controller\]")\]
+[Route("breeze/[controller]")]
 
 public class TodoesController : Controller
 
 {
 
-readonly EFContextProvider&lt;MyDbContext&gt; \_contextProvider =
+readonly EFContextProvider<MyDbContext> _contextProvider =
 
-new EFContextProvider&lt;MyDbContext&gt;();
+new EFContextProvider<MyDbContext>();
 
-// \~/breeze/todoes/Metadata
+// ~/breeze/todoes/Metadata
 
-\[HttpGet\]
+[HttpGet]
 
 public string Metadata()
 
 {
 
-return \_contextProvider.Metadata();
+return _contextProvider.Metadata();
 
 }
 
-// \~/breeze/todoes/Todoes
+// ~/breeze/todoes/Todoes
 
-// \~/breeze/todoes/Todoes?\$filter=IsArchived eq
-false&\$orderby=CreatedAt
+// ~/breeze/todoes/Todoes?$filter=IsArchived eq
+false&$orderby=CreatedAt
 
-\[HttpGet\]
+[HttpGet]
 
-public IQueryable&lt;TodoItem&gt; Todoes()
+public IQueryable<TodoItem> Todoes()
 
 {
 
-return \_contextProvider.Context.TodoItems;
+return _contextProvider.Context.TodoItems;
 
 }
 
-// \~/breeze/todoes/SaveChanges
+// ~/breeze/todoes/SaveChanges
 
-\[HttpPost\]
+[HttpPost]
 
 public SaveResult SaveChanges(JObject saveBundle)
 
 {
 
-return \_contextProvider.SaveChanges(saveBundle);
+return _contextProvider.SaveChanges(saveBundle);
 
 }
 
 }
+```
 
 References
 ==========
 
 1.  <http://breeze.github.io/doc-net/nuget-packages.html>
 
-2.  
+

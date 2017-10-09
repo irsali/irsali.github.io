@@ -32,25 +32,27 @@ Dependencies
 
 Installs
 --------
-
+```
 npm install aurelia-fetch-client --save
 
 npm install aurelia-breeze --save
+```
 
 Update aurelia.json for path of above installs
 ----------------------------------------------
 
+```
 {
 
 "name": "breeze-client",
 
-"path": "../node\_modules/breeze-client",
+"path": "../node_modules/breeze-client",
 
 "main": "breeze.base.debug.js",
 
 "exports": "breeze",
 
-"resources": \[
+"resources": [
 
 "breeze.modelLibrary.backingStore.js",
 
@@ -64,7 +66,7 @@ Update aurelia.json for path of above installs
 
 "breeze.uriBuilder.odata.js"
 
-\]
+]
 
 },
 
@@ -72,7 +74,7 @@ Update aurelia.json for path of above installs
 
 "name": "aurelia-breeze",
 
-"path": "../node\_modules/aurelia-breeze/dist/amd",
+"path": "../node_modules/aurelia-breeze/dist/amd",
 
 "main": "index"
 
@@ -82,15 +84,17 @@ Update aurelia.json for path of above installs
 
 "name": "aurelia-fetch-client",
 
-"path": "../node\_modules/aurelia-fetch-client/dist/amd",
+"path": "../node_modules/aurelia-fetch-client/dist/amd",
 
 "main": "aurelia-fetch-client"
 
 }
+```
 
 Register aurelia-breeze plugin with Aurelia
 -------------------------------------------
 
+```
 import 'breeze-client/breeze.modelLibrary.backingStore';
 
 import 'breeze-client/breeze.dataService.webApi';
@@ -103,11 +107,12 @@ aurelia.use
 
 .standardConfiguration()
 
-.plugin('aurelia-breeze'); // &lt;--------&lt;&lt;
+.plugin('aurelia-breeze'); // <--------<<
 
 aurelia.start().then(a =&gt; a.setRoot());
 
 }
+```
 
 Bingo!!! You are ready to use breeze in your Aurelia application.
 
@@ -119,14 +124,14 @@ you below error due to occurrence of multiple annonymous define.
 
 To reomove error use breeze.base.debug.js
 
-![](media/image1.png){width="6.5in" height="2.3892246281714784in"}
+![](/static/img/blog/Aurelia/aurelia-breeze-client-startup/1.png)
 
 Now breeze.base.debug.js needs backingStore adapter and you will see
 below error.
 
 Provide breeze-client/modelLibrary.backingStore.js via import in main.ts
 
-![](media/image2.png){width="6.5in" height="0.896738845144357in"}
+![](/static/img/blog/Aurelia/aurelia-breeze-client-startup/2.png)
 
 Voila, Errors are gone.
 

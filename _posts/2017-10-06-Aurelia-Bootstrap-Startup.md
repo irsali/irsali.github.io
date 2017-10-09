@@ -21,6 +21,7 @@ Aurelia Setup project
 Installs
 --------
 
+```
 npm install bootstrap --save
 
 npm install aurelia-bootstrap --save
@@ -28,10 +29,12 @@ npm install aurelia-bootstrap --save
 npm install velocity-animate --save
 
 npm install tether --save
+```
 
 Update aurelia.json for path of above installs
 ----------------------------------------------
 
+```
 "velocity-animate",
 
 "tether",
@@ -40,15 +43,15 @@ Update aurelia.json for path of above installs
 
 "name": "aurelia-bootstrap",
 
-"path": "../node\_modules/aurelia-bootstrap/dist/amd",
+"path": "../node_modules/aurelia-bootstrap/dist/amd",
 
 "main": "index",
 
-"resources": \[
+"resources": [
 
-"\*\*/\*.html"
+"**/*.html"
 
-\]
+]
 
 },
 
@@ -56,17 +59,19 @@ Update aurelia.json for path of above installs
 
 "name": "bootstrap",
 
-"path": "../node\_modules/bootstrap-v4-dev/dist/",
+"path": "../node_modules/bootstrap-v4-dev/dist/",
 
 "main": false,
 
-"resources": \[
+"resources": [
 
-"\*\*/\*.css"
+"**/*.css"
 
-\]
+]
 
 }
+
+```
 
 Register bootstrap plugin with Aurelia
 --------------------------------------
@@ -74,15 +79,17 @@ Register bootstrap plugin with Aurelia
 Aurelia-bootstrap supports both Bootstrap 3 and 4. to use the version 4.
 You need to explicity say Aurelia to use bootstrap version 4 like below.
 
+```
 export function configure(aurelia: Aurelia) {
 
 aurelia.use
 
 .standardConfiguration()
 
-.plugin('aurelia-bootstrap', plugin =&gt; plugin.options.version = 4)
+.plugin('aurelia-bootstrap', plugin => plugin.options.version = 4)
 
 .feature('resources');
+```
 
 Bingo!!! You are ready to use bootstrap in your Aurelia application.
 
@@ -93,6 +100,7 @@ Add BootstrapFormValidationRender in ValidationController and object to
 validate. Then validate using validate method. Also, on html must
 specify the field you want to validate.
 
+```
 constructor(private controller: ValidationController) {
 
 log.debug("constructor called");
@@ -105,16 +113,16 @@ this.controller.addObject(objectToValidate, getValidationRules());
 
 function getValidationRules(){
 
-return ValidationRules.ensure&lt;FormField, any&gt;(x =&gt; x.value)
+return ValidationRules.ensure<FormField, any>(x => x.value)
 
-.required().when(x =&gt; x.validation && x.validation.required)
+.required().when(x => x.validation && x.validation.required)
 
-.email().when(x =&gt; x.validation && x.validation.email)
+.email().when(x => x.validation && x.validation.email)
 
-.maxLength(this.validation.maxLength).when(x =&gt; x.validation &&
+.maxLength(this.validation.maxLength).when(x => x.validation &&
 x.validation.maxLength && typeof x.value == "string")
 
-.minLength(this.validation.maxLength).when(x =&gt; x.validation &&
+.minLength(this.validation.maxLength).when(x => x.validation &&
 x.validation.minLength && typeof x.value == "string")
 
 .rules;
@@ -125,7 +133,7 @@ save() {
 
 this.controller.validate()
 
-.then(result =&gt; {
+.then(result => {
 
 if (result.valid) {
 
@@ -135,10 +143,13 @@ if (result.valid) {
 
 }
 
-&lt;input type=”text” value.bind="formField.value & validate" /&gt;
+<input type=”text” value.bind="formField.value & validate" />
+
+```
 
 Below is a BootstrapFormValidationRender a class.
 
+```
 import {
 
 ValidationRenderer,
@@ -203,7 +214,7 @@ message.className = 'form-control-feedback';
 
 message.textContent = result.message;
 
-message.id = \`validation-message-\${result.id}\`;
+message.id = 'validation-message-${result.id}';
 
 formGroup.lastElementChild.appendChild(message);
 
@@ -228,7 +239,7 @@ return;
 // remove help-block
 
 const message =
-formGroup.lastElementChild.querySelector(\`\#validation-message-\${result.id}\`);
+formGroup.lastElementChild.querySelector('\#validation-message-${result.id}');
 
 if (message) {
 
@@ -249,5 +260,6 @@ formGroup.classList.remove('has-danger');
 }
 
 }
+```
 
 That’s it. You can run your project and enjoy client side validation.
