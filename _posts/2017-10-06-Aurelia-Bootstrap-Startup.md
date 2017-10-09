@@ -21,7 +21,7 @@ Aurelia Setup project
 Installs
 --------
 
-```
+``` node
 npm install bootstrap --save
 
 npm install aurelia-bootstrap --save
@@ -34,7 +34,7 @@ npm install tether --save
 Update aurelia.json for path of above installs
 ----------------------------------------------
 
-```
+``` json
 "velocity-animate",
 
 "tether",
@@ -79,7 +79,7 @@ Register bootstrap plugin with Aurelia
 Aurelia-bootstrap supports both Bootstrap 3 and 4. to use the version 4.
 You need to explicity say Aurelia to use bootstrap version 4 like below.
 
-```
+``` ts
 export function configure(aurelia: Aurelia) {
 
 aurelia.use
@@ -100,7 +100,7 @@ Add BootstrapFormValidationRender in ValidationController and object to
 validate. Then validate using validate method. Also, on html must
 specify the field you want to validate.
 
-```
+``` ts
 constructor(private controller: ValidationController) {
 
 log.debug("constructor called");
@@ -149,7 +149,7 @@ if (result.valid) {
 
 Below is a BootstrapFormValidationRender a class.
 
-```
+``` ts
 import {
 
 ValidationRenderer,

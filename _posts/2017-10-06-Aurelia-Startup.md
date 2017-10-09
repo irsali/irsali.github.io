@@ -44,7 +44,7 @@ For windows 64 click the circled link.
 
 On cmd and run below command
 
-```
+``` node
 npm install aurelia-cli –g
 ```
 
@@ -63,7 +63,7 @@ For aurelia project in .Net Core project, we do not want project folder
 to be created by aurelia-cli. For the same --here is used, otherwise do
 not use --here.
 
-```
+``` node
 au new --here
 ```
 
@@ -119,7 +119,7 @@ folder).
 
 Use below lines in it.
 
-```
+``` cs
 app.UseDefaultFiles();
 
 app.UseStaticFiles();

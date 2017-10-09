@@ -116,7 +116,7 @@ Aurelia setup project.
 Installs 
 ---------
 
-```
+``` node
 npm install syncfusion-javascript --save
 
 npm install aurelia-syncfusion-bridge –save
@@ -132,7 +132,7 @@ Update aurelia_project/aurelia.json
 In build.bundles with name: vendor-bundle.js under dependencies array
 add these if not already added.
 
-```
+``` json
 "jquery",
 
 "jquery-validation",
@@ -187,7 +187,7 @@ add these if not already added.
 Also, in build add ‘copyFiles’ instruction to where these files are
 required.
 
-```
+``` json
 "copyFiles": {
 
 "node_modules/syncfusion-javascript/Content/ej/web/common-images/**/*":
@@ -204,7 +204,7 @@ Add Syncfusion-bridge as plugin
 
 In main.ts register installed plugin to use.
 
-```
+``` ts
 export function configure(aurelia: Aurelia) {
 
 aurelia.use

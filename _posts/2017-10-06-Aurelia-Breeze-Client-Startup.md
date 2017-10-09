@@ -32,7 +32,7 @@ Dependencies
 
 Installs
 --------
-```
+``` node
 npm install aurelia-fetch-client --save
 
 npm install aurelia-breeze --save
@@ -41,7 +41,7 @@ npm install aurelia-breeze --save
 Update aurelia.json for path of above installs
 ----------------------------------------------
 
-```
+``` json
 {
 
 "name": "breeze-client",
@@ -94,7 +94,7 @@ Update aurelia.json for path of above installs
 Register aurelia-breeze plugin with Aurelia
 -------------------------------------------
 
-```
+``` ts
 import 'breeze-client/breeze.modelLibrary.backingStore';
 
 import 'breeze-client/breeze.dataService.webApi';

@@ -27,7 +27,7 @@ Install packages
 Breeze controller example
 -------------------------
 
-```
+``` cs
 /// <summary>
 
 /// Api that exposes data from breeze client
