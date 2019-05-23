@@ -6564,7 +6564,7 @@ body.landing-page {
   color: #3385FF;
 }
 .landing-page section p {
-  color: #aeaeae;
+  /* color: #aeaeae; */
   font-size: 13px;
 }
 .landing-page address {
