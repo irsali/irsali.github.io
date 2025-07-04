@@ -1,8 +1,8 @@
 {
-  "website":{
+  "website": {
     "title": "Irshad's blog"
   },
-  "nav":{
+  "nav": {
     "home": "Home",
     "about_me": "About",
     "skills": "Skills",
@@ -10,26 +10,32 @@
     "blog": "Blog",
     "link": "Link"
   },
-  "about_me":{
+  "about_me": {
     "about_me": "About Me",
     "des": "A results-driven analytical software engineer that gets things done. Strong in design and integration problem solving skills. Expert in C# with knowledge of vast array technologies in web development."
   },
-  "skills":{
+  "skills": {
     "my_skills": "My Skills"
   },
-  "projects":{
+  "projects": {
     "my_projects": "My Projects",
     "saplatform": "Saplatform is a automated service for operations, it has asset management, project release, database access function, it can control mass servers.",
     "jalpc": "Jalpc is a simple, beautiful and swift theme for Jekyll. It has comprehensive function, it can be easily used and edited. It's adapted for many kinds devices.",
     "angularjs": "It is a web font application written by Angularjs and deployed by Jekyll on github (gh-pages), the backend platform is Leancloud, you can use Parse as well.",
     "rsser": "Rsser is an Ionic application, with this application we can read news and articles freely, you can add rss address from the given list and add it manually."
   },
-  "career":{
+  "career": {
     "my_career": "My Career",
+    "psl2_des": "Promoted to Project Lead. Contributed in Healthcare workforce management using majorly microsoft technologies then a banking project about pricing using mern stack",
+    "psl2_date": "Jan 2024",
+    "psl2_job": "Project Lead",
+    "psl": "Persistent Systems",
+    "psl_des": "Joined Persistent ",
+    "psl_date": "Nov 2021",
+    "psl_job": "Software Engineering Lead",
     "shree_date": "till date",
     "shree_job": "Software Engineer",
     "shree_info": "Shree Infosoft Pvt. Ltd.",
-    
     "bt": "Brain Technosys Pvt. Ltd.",
     "bt_des": "Promoted to Sr. Software Engineer with a \"Impressive Initiator\" award.    Started to work on some awsome technologies like apache.ignite, Fody, QrCoder.    Developing a distributed in memory image cache using Apache.Ignite.    Weaving .net assemblies using Fody.    Creating dynamic QrCode with image overlay.    Developing a Validation Engine in C# and Typescript to control validation from excel.",
     "bt_date": "June 2017",
@@ -40,19 +46,18 @@
     "btj_job": "Software Engineer",
     "atg": "ATG Trans",
     "atg_des": "Started my development career in .Net Technologies. Learned Asp.Net MVC with various aspects of web development.",
-    "atg_date": "Feb 2013",
+    "atg_date": "Nov 2014",
     "atg_job": "Software Engineer",
     "college": "Gloxinia Infotech Pvt. Ltd.",
     "college_des": "Joined Gloxinia as Faculty.",
     "college_date": "",
     "college_job": "Faculty"
   },
-  "blog":{
+  "blog": {
     "my_blog": "My Blog"
   },
-  "link":{
+  "link": {
     "link": "Link",
     "view": "views"
   }
-
 }
