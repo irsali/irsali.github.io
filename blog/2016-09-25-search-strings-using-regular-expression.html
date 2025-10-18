@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- Prevent theme flash -->
+		<script>
+			(function() {
+				try {
+					const theme = localStorage.getItem('theme') || 
+						(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+					document.documentElement.setAttribute('data-theme', theme);
+				} catch (e) {
+					// Fallback to light theme if localStorage fails
+					document.documentElement.setAttribute('data-theme', 'light');
+				}
+			})();
+		</script>
+		
+		<link href="../_app/immutable/assets/0.DUB5UNO8.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Preloader.xsMLIHNy.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/2.C5pvklzQ.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/3.BdpmzKi1.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/6.T6Sywknv.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.Cqe1Mc9W.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/tg3k2zlt.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Rj4Om7jX.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Bby5WbAi.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/4ZPdCCFq.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.DgmVHzw5.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Dp1pzeXC.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Bzak7iHL.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/DXk6krQO.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/CjPmOg3u.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/C5XHJU6-.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.BUSkcVPQ.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/2.Bw6ugDr4.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/X5ievcsn.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/BIx9FNUU.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/DsuFQ1Ac.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/BSlJg8PE.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/C6IdrMd4.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/aMJuR3jV.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/3.BxhErUT6.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/6.BG_RSV5N.js"><!--[--><!--]--><!--[--><!--]--><!--[--><!--[--><meta name="description" content="Search string using regular expression in C#"/><!--]--><!--]--><title>Search string using regular expression in C# | Blog</title>
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[--><!----><div class="pointer-events-none fixed inset-0 z-[9999] transition duration-300" style="background: radial-gradient(600px at 50% 50%, rgba(25, 199, 166, 0.12), transparent 80%);"></div> <!--[--><!----><!--[--><div class="preloader svelte-1jvqc0e"><div class="preloader__container svelte-1jvqc0e"><div class="preloader__logo svelte-1jvqc0e"><span class="preloader__text svelte-1jvqc0e">I</span> <span class="preloader__text svelte-1jvqc0e">A</span></div> <div class="preloader__dots svelte-1jvqc0e"><div class="preloader__dot svelte-1jvqc0e"></div> <div class="preloader__dot svelte-1jvqc0e"></div> <div class="preloader__dot svelte-1jvqc0e"></div></div> <div class="preloader__progress svelte-1jvqc0e"><div class="preloader__progress-bar svelte-1jvqc0e"></div></div> <div class="preloader__loading-text svelte-1jvqc0e"><span class="svelte-1jvqc0e">Loading</span> <span class="preloader__loading-dots svelte-1jvqc0e">...</span></div></div></div><!--]--><!----> <div class="blog-list-layout"><header class="blog-header svelte-1qlno7m"><div class="blog-header__container svelte-1qlno7m"><div class="blog-header__left svelte-1qlno7m"><a href="/" class="blog-header__logo svelte-1qlno7m">Irshad Ali</a></div> <nav class="blog-header__nav svelte-1qlno7m"><button class="search-btn svelte-1qlno7m" title="Search blogs" aria-label="Open search modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-search search-btn__icon"><!--[--><!----><path d="m21 21-4.34-4.34"><!----></path><!----><!----><circle cx="11" cy="11" r="8"><!----></circle><!----><!--]--><!----><!----><!----><!----></svg><!----> <span class="search-btn__text svelte-1qlno7m">Ctrl K</span></button> <a href="/blog" class="blog-header__link svelte-1qlno7m">Blog</a> <button class="theme-toggle svelte-1qlno7m" aria-label="Toggle theme"><!--[!--><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-moon theme-toggle__icon"><!--[--><!----><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"><!----></path><!----><!--]--><!----><!----><!----><!----></svg><!--]--></button></nav></div></header> <!--[!--><!--]--></div> <div class="blog-content svelte-1qlno7m"><!----><!--[--><!----><div class="blog-layout mx-auto max-w-3xl bg-[var(--color-bg)] px-4 py-8 text-[var(--color-text)] svelte-4rmzu6"><header class="mb-8"><h1 class="mb-2 text-3xl font-bold text-[var(--color-primary)]">Search string using regular expression in C#</h1></header> <main class="min-h-[60vh]"><!----><!----><article class="prose prose-lg bg-[var(--color-bg)] text-[var(--color-text)]"><!--[--><div class="post-meta svelte-q1cdo6"><!--[--><span class="post-date svelte-q1cdo6"><svg class="icon svelte-q1cdo6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v4m8-4v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"></path></svg> 2016-09-25</span><!--]--> <!--[--><span class="reading-time svelte-q1cdo6"><svg class="icon svelte-q1cdo6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12,6 12,12 16,14"></polyline></svg> 2 min read</span><!--]--></div> <!----><h2>Preface</h2> <p>A little bit of intro and code to get started with Regular Expression.</p> <p>The System.Text.RegularExpressions.Regex class can be used to search strings. These searches can range in complexity from very simple to making full use of regular expressions.</p> <h2>Example</h2> <p>The following code is a console application that performs a simple case-insensitive search of the strings in an array. The static method Regex.IsMatch performs the search given the string to search and a string that contains the search pattern. In this case, a third argument is used to indicate that case should be ignored.</p> <pre class="language-csharp"><!----><code class="language-csharp">
+<span class="token keyword">class</span> <span class="token class-name">TestRegularExpressions</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token class-name"><span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> sentences <span class="token operator">=</span> 
+        <span class="token punctuation">&#123;</span>
+            <span class="token string">"C# code"</span><span class="token punctuation">,</span>
+            <span class="token string">"Chapter 2: Writing Code"</span><span class="token punctuation">,</span>
+            <span class="token string">"Unicode"</span><span class="token punctuation">,</span>
+            <span class="token string">"no match here"</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+        <span class="token class-name"><span class="token keyword">string</span></span> sPattern <span class="token operator">=</span> <span class="token string">"code"</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> s <span class="token keyword">in</span> sentences<span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            System<span class="token punctuation">.</span>Console<span class="token punctuation">.</span><span class="token function">Write</span><span class="token punctuation">(</span><span class="token string">"&#123;0,24&#125;"</span><span class="token punctuation">,</span> s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>System<span class="token punctuation">.</span>Text<span class="token punctuation">.</span>RegularExpressions<span class="token punctuation">.</span>Regex<span class="token punctuation">.</span><span class="token function">IsMatch</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> sPattern<span class="token punctuation">,</span> System<span class="token punctuation">.</span>Text<span class="token punctuation">.</span>RegularExpressions<span class="token punctuation">.</span>RegexOptions<span class="token punctuation">.</span>IgnoreCase<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token punctuation">&#123;</span>
+                System<span class="token punctuation">.</span>Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"  (match for '&#123;0&#125;' found)"</span><span class="token punctuation">,</span> sPattern<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+            <span class="token keyword">else</span>
+            <span class="token punctuation">&#123;</span>
+                System<span class="token punctuation">.</span>Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
+
+        <span class="token comment">// Keep the console window open in debug mode.</span>
+        System<span class="token punctuation">.</span>Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Press any key to exit."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>Console<span class="token punctuation">.</span><span class="token function">ReadKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">/* Output:
+           C# code  (match for 'code' found)
+           Chapter 2: Writing Code  (match for 'code' found)
+           Unicode  (match for 'code' found)
+           no match here
+*/</span>
+</code><!----></pre> <h2>Example</h2> <p>The following code is a console application that uses regular expressions to validate the format of each string in an array. The validation requires that each string take the form of a telephone number in which three groups of digits are separated by dashes, the first two groups contain three digits, and the third group contains four digits. This is done by using the regular expression ^\d3-\d3-\d4$.</p> <pre class="language-csharp"><!----><code class="language-csharp">
+<span class="token keyword">class</span> <span class="token class-name">TestRegularExpressionValidation</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token class-name"><span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> numbers <span class="token operator">=</span> 
+        <span class="token punctuation">&#123;</span>
+            <span class="token string">"123-555-0190"</span><span class="token punctuation">,</span> 
+            <span class="token string">"444-234-22450"</span><span class="token punctuation">,</span> 
+            <span class="token string">"690-555-0178"</span><span class="token punctuation">,</span> 
+            <span class="token string">"146-893-232"</span><span class="token punctuation">,</span>
+            <span class="token string">"146-555-0122"</span><span class="token punctuation">,</span>
+            <span class="token string">"4007-555-0111"</span><span class="token punctuation">,</span> 
+            <span class="token string">"407-555-0111"</span><span class="token punctuation">,</span> 
+            <span class="token string">"407-2-5555"</span><span class="token punctuation">,</span> 
+        <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+        <span class="token class-name"><span class="token keyword">string</span></span> sPattern <span class="token operator">=</span> <span class="token string">"^\d&#123;3&#125;-\d&#123;3&#125;-\d&#123;4&#125;$"</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> s <span class="token keyword">in</span> numbers<span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            System<span class="token punctuation">.</span>Console<span class="token punctuation">.</span><span class="token function">Write</span><span class="token punctuation">(</span><span class="token string">"&#123;0,14&#125;"</span><span class="token punctuation">,</span> s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>System<span class="token punctuation">.</span>Text<span class="token punctuation">.</span>RegularExpressions<span class="token punctuation">.</span>Regex<span class="token punctuation">.</span><span class="token function">IsMatch</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> sPattern<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token punctuation">&#123;</span>
+                System<span class="token punctuation">.</span>Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">" - valid"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+            <span class="token keyword">else</span>
+            <span class="token punctuation">&#123;</span>
+                System<span class="token punctuation">.</span>Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">" - invalid"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
+
+        <span class="token comment">// Keep the console window open in debug mode.</span>
+        System<span class="token punctuation">.</span>Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Press any key to exit."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>Console<span class="token punctuation">.</span><span class="token function">ReadKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">/* Output:
+      123-555-0190 - valid
+     444-234-22450 - invalid
+      690-555-0178 - valid
+       146-893-232 - invalid
+      146-555-0122 - valid
+     4007-555-0111 - invalid
+      407-555-0111 - valid
+        407-2-5555 - invalid
+*/</span>
+</code><!----></pre><!----><!--]--></article> <div class="giscus svelte-q1cdo6"></div><!----><!----></main> <footer class="mt-12 text-center text-sm text-[var(--color-muted)]"></footer></div><!----><!--]--><!----></div><!----><!--]--><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_ceevxu = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.Cqe1Mc9W.js"),
+						import("../_app/immutable/entry/app.DgmVHzw5.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 3, 6],
+							data: [null,null,null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

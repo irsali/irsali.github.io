@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- Prevent theme flash -->
+		<script>
+			(function() {
+				try {
+					const theme = localStorage.getItem('theme') || 
+						(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+					document.documentElement.setAttribute('data-theme', theme);
+				} catch (e) {
+					// Fallback to light theme if localStorage fails
+					document.documentElement.setAttribute('data-theme', 'light');
+				}
+			})();
+		</script>
+		
+		<link href="../_app/immutable/assets/0.DUB5UNO8.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Preloader.xsMLIHNy.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/2.C5pvklzQ.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/3.BdpmzKi1.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/6.T6Sywknv.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.Cqe1Mc9W.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/tg3k2zlt.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Rj4Om7jX.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Bby5WbAi.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/4ZPdCCFq.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.DgmVHzw5.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Dp1pzeXC.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Bzak7iHL.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/DXk6krQO.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/CjPmOg3u.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/C5XHJU6-.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.BUSkcVPQ.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/2.Bw6ugDr4.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/X5ievcsn.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/BIx9FNUU.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/DsuFQ1Ac.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/BSlJg8PE.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/C6IdrMd4.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/aMJuR3jV.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/3.BxhErUT6.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/6.BG_RSV5N.js"><!--[--><!--]--><!--[--><!--]--><!--[--><!--[--><meta name="description" content="aurelia"/><!--]--><!--]--><title>Aurelia Bootstrap Startup | Blog</title>
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[--><!----><div class="pointer-events-none fixed inset-0 z-[9999] transition duration-300" style="background: radial-gradient(600px at 50% 50%, rgba(25, 199, 166, 0.12), transparent 80%);"></div> <!--[--><!----><!--[--><div class="preloader svelte-1jvqc0e"><div class="preloader__container svelte-1jvqc0e"><div class="preloader__logo svelte-1jvqc0e"><span class="preloader__text svelte-1jvqc0e">I</span> <span class="preloader__text svelte-1jvqc0e">A</span></div> <div class="preloader__dots svelte-1jvqc0e"><div class="preloader__dot svelte-1jvqc0e"></div> <div class="preloader__dot svelte-1jvqc0e"></div> <div class="preloader__dot svelte-1jvqc0e"></div></div> <div class="preloader__progress svelte-1jvqc0e"><div class="preloader__progress-bar svelte-1jvqc0e"></div></div> <div class="preloader__loading-text svelte-1jvqc0e"><span class="svelte-1jvqc0e">Loading</span> <span class="preloader__loading-dots svelte-1jvqc0e">...</span></div></div></div><!--]--><!----> <div class="blog-list-layout"><header class="blog-header svelte-1qlno7m"><div class="blog-header__container svelte-1qlno7m"><div class="blog-header__left svelte-1qlno7m"><a href="/" class="blog-header__logo svelte-1qlno7m">Irshad Ali</a></div> <nav class="blog-header__nav svelte-1qlno7m"><button class="search-btn svelte-1qlno7m" title="Search blogs" aria-label="Open search modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-search search-btn__icon"><!--[--><!----><path d="m21 21-4.34-4.34"><!----></path><!----><!----><circle cx="11" cy="11" r="8"><!----></circle><!----><!--]--><!----><!----><!----><!----></svg><!----> <span class="search-btn__text svelte-1qlno7m">Ctrl K</span></button> <a href="/blog" class="blog-header__link svelte-1qlno7m">Blog</a> <button class="theme-toggle svelte-1qlno7m" aria-label="Toggle theme"><!--[!--><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-moon theme-toggle__icon"><!--[--><!----><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"><!----></path><!----><!--]--><!----><!----><!----><!----></svg><!--]--></button></nav></div></header> <!--[!--><!--]--></div> <div class="blog-content svelte-1qlno7m"><!----><!--[--><!----><div class="blog-layout mx-auto max-w-3xl bg-[var(--color-bg)] px-4 py-8 text-[var(--color-text)] svelte-4rmzu6"><header class="mb-8"><h1 class="mb-2 text-3xl font-bold text-[var(--color-primary)]">Aurelia Bootstrap Startup</h1></header> <main class="min-h-[60vh]"><!----><!----><article class="prose prose-lg bg-[var(--color-bg)] text-[var(--color-text)]"><!--[--><div class="post-meta svelte-q1cdo6"><!--[--><span class="post-date svelte-q1cdo6"><svg class="icon svelte-q1cdo6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v4m8-4v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"></path></svg> 2017-10-06</span><!--]--> <!--[--><span class="reading-time svelte-q1cdo6"><svg class="icon svelte-q1cdo6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12,6 12,12 16,14"></polyline></svg> 3 min read</span><!--]--></div> <!----><h1>Getting Started</h1> <h2>Pre Requisites</h2> <p>Aurelia Setup project</p> <h3>Installs</h3> <pre class="language-bash"><!----><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> bootstrap <span class="token parameter variable">--save</span>
+
+<span class="token function">npm</span> <span class="token function">install</span> aurelia-bootstrap <span class="token parameter variable">--save</span>
+
+<span class="token function">npm</span> <span class="token function">install</span> velocity-animate <span class="token parameter variable">--save</span>
+
+<span class="token function">npm</span> <span class="token function">install</span> tether <span class="token parameter variable">--save</span></code><!----></pre> <h3>Update aurelia.json for path of above installs</h3> <pre class="language-json"><!----><code class="language-json"><span class="token punctuation">[</span>
+	<span class="token string">"velocity-animate"</span><span class="token punctuation">,</span>
+
+	<span class="token string">"tether"</span><span class="token punctuation">,</span>
+
+	<span class="token punctuation">&#123;</span>
+		<span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"aurelia-bootstrap"</span><span class="token punctuation">,</span>
+
+		<span class="token property">"path"</span><span class="token operator">:</span> <span class="token string">"../node_modules/aurelia-bootstrap/dist/amd"</span><span class="token punctuation">,</span>
+
+		<span class="token property">"main"</span><span class="token operator">:</span> <span class="token string">"index"</span><span class="token punctuation">,</span>
+
+		<span class="token property">"resources"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"**/*.html"</span><span class="token punctuation">]</span>
+	<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+
+	<span class="token punctuation">&#123;</span>
+		<span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"bootstrap"</span><span class="token punctuation">,</span>
+
+		<span class="token property">"path"</span><span class="token operator">:</span> <span class="token string">"../node_modules/bootstrap-v4-dev/dist/"</span><span class="token punctuation">,</span>
+
+		<span class="token property">"main"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+		<span class="token property">"resources"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"**/*.css"</span><span class="token punctuation">]</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">]</span></code><!----></pre> <h3>Register bootstrap plugin with Aurelia</h3> <p>Aurelia-bootstrap supports both Bootstrap 3 and 4. to use the version 4.
+You need to explicity say Aurelia to use bootstrap version 4 like below.</p> <pre class="language-ts"><!----><code class="language-ts"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">configure</span><span class="token punctuation">(</span>aurelia<span class="token operator">:</span> Aurelia<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+	aurelia<span class="token punctuation">.</span>use
+
+		<span class="token punctuation">.</span><span class="token function">standardConfiguration</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+		<span class="token punctuation">.</span><span class="token function">plugin</span><span class="token punctuation">(</span><span class="token string">'aurelia-bootstrap'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>plugin<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>plugin<span class="token punctuation">.</span>options<span class="token punctuation">.</span>version <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+		<span class="token punctuation">.</span><span class="token function">feature</span><span class="token punctuation">(</span><span class="token string">'resources'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code><!----></pre> <p>Bingo!!! You are ready to use bootstrap in your Aurelia application.</p> <h2>Using Bootstrap Renderer for faciliating validation errors</h2> <p>Add BootstrapFormValidationRender in ValidationController and object to
+validate. Then validate using validate method. Also, on html must
+specify the field you want to validate.</p> <pre class="language-ts"><!----><code class="language-ts"><span class="token function">constructor</span><span class="token punctuation">(</span><span class="token keyword">private</span> controller<span class="token operator">:</span> ValidationController<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+
+log<span class="token punctuation">.</span><span class="token function">debug</span><span class="token punctuation">(</span><span class="token string">"constructor called"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">this</span><span class="token punctuation">.</span>controller<span class="token punctuation">.</span><span class="token function">addRenderer</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">BootstrapFormValidationRenderer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">this</span><span class="token punctuation">.</span>controller<span class="token punctuation">.</span><span class="token function">addObject</span><span class="token punctuation">(</span>objectToValidate<span class="token punctuation">,</span> <span class="token function">getValidationRules</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">&#125;</span></code><!----></pre> <pre class="language-ts"><!----><code class="language-ts"><span class="token keyword">function</span> <span class="token function">getValidationRules</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+	<span class="token keyword">return</span> ValidationRules<span class="token punctuation">.</span><span class="token generic-function"><span class="token function">ensure</span><span class="token generic class-name"><span class="token operator">&lt;</span>FormField<span class="token punctuation">,</span> <span class="token builtin">any</span><span class="token operator">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">=></span> x<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
+
+		<span class="token punctuation">.</span><span class="token function">required</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token punctuation">.</span><span class="token function">when</span><span class="token punctuation">(</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">=></span> x<span class="token punctuation">.</span>validation <span class="token operator">&amp;&amp;</span> x<span class="token punctuation">.</span>validation<span class="token punctuation">.</span>required<span class="token punctuation">)</span>
+
+		<span class="token punctuation">.</span><span class="token function">email</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token punctuation">.</span><span class="token function">when</span><span class="token punctuation">(</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">=></span> x<span class="token punctuation">.</span>validation <span class="token operator">&amp;&amp;</span> x<span class="token punctuation">.</span>validation<span class="token punctuation">.</span>email<span class="token punctuation">)</span>
+
+		<span class="token punctuation">.</span><span class="token function">maxLength</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>validation<span class="token punctuation">.</span>maxLength<span class="token punctuation">)</span>
+		<span class="token punctuation">.</span><span class="token function">when</span><span class="token punctuation">(</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">=></span> x<span class="token punctuation">.</span>validation <span class="token operator">&amp;&amp;</span> x<span class="token punctuation">.</span>validation<span class="token punctuation">.</span>maxLength <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> x<span class="token punctuation">.</span>value <span class="token operator">==</span> <span class="token string">'string'</span><span class="token punctuation">)</span>
+
+		<span class="token punctuation">.</span><span class="token function">minLength</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>validation<span class="token punctuation">.</span>maxLength<span class="token punctuation">)</span>
+		<span class="token punctuation">.</span><span class="token function">when</span><span class="token punctuation">(</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">=></span> x<span class="token punctuation">.</span>validation <span class="token operator">&amp;&amp;</span> x<span class="token punctuation">.</span>validation<span class="token punctuation">.</span>minLength <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> x<span class="token punctuation">.</span>value <span class="token operator">==</span> <span class="token string">'string'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>rules<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code><!----></pre> <pre class="language-ts"><!----><code class="language-ts"><span class="token keyword">function</span> <span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+	<span class="token keyword">this</span><span class="token punctuation">.</span>controller
+		<span class="token punctuation">.</span><span class="token function">validate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+		<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>result<span class="token punctuation">.</span>valid<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			<span class="token punctuation">&#125;</span>
+		<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code><!----></pre> <pre class="language-html"><!----><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>”text”<span class="token punctuation">"</span></span> <span class="token attr-name">value.bind</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>formField.value &amp; validate<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code><!----></pre> <p>Below is a BootstrapFormValidationRender a class.</p> <pre class="language-ts"><!----><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> ValidationRenderer<span class="token punctuation">,</span> RenderInstruction<span class="token punctuation">,</span> ValidateResult <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'aurelia-validation'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">BootstrapFormValidationRenderer</span> <span class="token punctuation">&#123;</span>
+	<span class="token function">render</span><span class="token punctuation">(</span>instruction<span class="token operator">:</span> RenderInstruction<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> <span class="token punctuation">&#123;</span> result<span class="token punctuation">,</span> elements <span class="token punctuation">&#125;</span> <span class="token keyword">of</span> instruction<span class="token punctuation">.</span>unrender<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> element <span class="token keyword">of</span> elements<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+				<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>element<span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">&#125;</span>
+		<span class="token punctuation">&#125;</span>
+
+		<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> <span class="token punctuation">&#123;</span> result<span class="token punctuation">,</span> elements <span class="token punctuation">&#125;</span> <span class="token keyword">of</span> instruction<span class="token punctuation">.</span>render<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> element <span class="token keyword">of</span> elements<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+				<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>element<span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">&#125;</span>
+		<span class="token punctuation">&#125;</span>
+	<span class="token punctuation">&#125;</span>
+
+	<span class="token function">add</span><span class="token punctuation">(</span>element<span class="token operator">:</span> Element<span class="token punctuation">,</span> result<span class="token operator">:</span> ValidateResult<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>result<span class="token punctuation">.</span>valid<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			<span class="token keyword">return</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+
+		<span class="token keyword">const</span> formGroup <span class="token operator">=</span> element<span class="token punctuation">.</span><span class="token function">closest</span><span class="token punctuation">(</span><span class="token string">'.form-group'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>formGroup<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			<span class="token keyword">return</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+
+		<span class="token comment">// add the has-danger class to the enclosing form-group div</span>
+
+		formGroup<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">'has-danger'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// add help-block</span>
+
+		<span class="token keyword">const</span> message <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		message<span class="token punctuation">.</span>className <span class="token operator">=</span> <span class="token string">'form-control-feedback'</span><span class="token punctuation">;</span>
+
+		message<span class="token punctuation">.</span>textContent <span class="token operator">=</span> result<span class="token punctuation">.</span>message<span class="token punctuation">;</span>
+
+		message<span class="token punctuation">.</span>id <span class="token operator">=</span> <span class="token string">'validation-message-$&#123;result.id&#125;'</span><span class="token punctuation">;</span>
+
+		formGroup<span class="token punctuation">.</span>lastElementChild<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+
+	<span class="token function">remove</span><span class="token punctuation">(</span>element<span class="token operator">:</span> Element<span class="token punctuation">,</span> result<span class="token operator">:</span> ValidateResult<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>result<span class="token punctuation">.</span>valid<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			<span class="token keyword">return</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+
+		<span class="token keyword">const</span> formGroup <span class="token operator">=</span> element<span class="token punctuation">.</span><span class="token function">closest</span><span class="token punctuation">(</span><span class="token string">'.form-group'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>formGroup<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			<span class="token keyword">return</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+
+		<span class="token comment">// remove help-block</span>
+
+		<span class="token keyword">const</span> message <span class="token operator">=</span> formGroup<span class="token punctuation">.</span>lastElementChild<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#validation-message-$&#123;result.id&#125;'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>message<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			formGroup<span class="token punctuation">.</span>lastElementChild<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+			<span class="token comment">// remove the has-danger class from the enclosing form-group div</span>
+
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>formGroup<span class="token punctuation">.</span>lastElementChild<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">'.form-control-feedback'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+				formGroup<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">'has-danger'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">&#125;</span>
+		<span class="token punctuation">&#125;</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code><!----></pre> <p>That’s it. You can run your project and enjoy client side validation.</p><!----><!--]--></article> <div class="giscus svelte-q1cdo6"></div><!----><!----></main> <footer class="mt-12 text-center text-sm text-[var(--color-muted)]"></footer></div><!----><!--]--><!----></div><!----><!--]--><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_ceevxu = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.Cqe1Mc9W.js"),
+						import("../_app/immutable/entry/app.DgmVHzw5.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2, 3, 6],
+							data: [null,null,null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

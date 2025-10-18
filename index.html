@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- Prevent theme flash -->
+		<script>
+			(function() {
+				try {
+					const theme = localStorage.getItem('theme') || 
+						(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+					document.documentElement.setAttribute('data-theme', theme);
+				} catch (e) {
+					// Fallback to light theme if localStorage fails
+					document.documentElement.setAttribute('data-theme', 'light');
+				}
+			})();
+		</script>
+		
+		<link rel="modulepreload" href="/_app/immutable/entry/start.Cqe1Mc9W.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/tg3k2zlt.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/Rj4Om7jX.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/Bby5WbAi.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/4ZPdCCFq.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/app.DgmVHzw5.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/Dp1pzeXC.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/Bzak7iHL.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/DXk6krQO.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/CjPmOg3u.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/C5XHJU6-.js">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+			<script>
+				{
+					__sveltekit_ceevxu = {
+						base: ""
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("/_app/immutable/entry/start.Cqe1Mc9W.js"),
+						import("/_app/immutable/entry/app.DgmVHzw5.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
