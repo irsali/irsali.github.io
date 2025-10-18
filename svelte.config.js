@@ -30,7 +30,15 @@ const config = {
 			],
 		})
 	],
-	kit: { adapter: adapter() },
+	kit: {
+		adapter: adapter(),
+		paths: {
+			base: '', 
+		},
+		prerender: {
+			handleHttpError: 'warn'
+		}
+	},
 	extensions: ['.svelte', '.svx', '.md']
 };
 
