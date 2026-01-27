@@ -1,5 +1,4 @@
 import type { MarkdownModule, PostMetaWithUrl } from '$lib/types';
-import { getReadingTime } from '$lib/utils/reading-time';
 
 class PostService {
 
@@ -16,20 +15,6 @@ class PostService {
     for (const [path, mod] of Object.entries(modules)) {
       const slug = path.split('/').pop()?.replace(/\.md$/, '');
       const meta = mod.metadata ?? {};
-      
-      // Calculate reading time if not already present
-      if (!meta.readingTime) {
-        try {
-          // Import the raw markdown content for word counting
-          const rawContent = await import(`../../posts/blog/${slug}.md?raw`);
-          if (rawContent.default) {
-            meta.readingTime = getReadingTime(rawContent.default);
-          }
-        } catch (error) {
-          // If we can't get raw content, skip reading time calculation
-          console.warn('Could not calculate reading time for', slug);
-        }
-      }
       
       posts.push({
         url: `${this.blogUrlPrefix}${slug}`,

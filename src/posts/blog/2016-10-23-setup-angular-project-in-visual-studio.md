@@ -5,6 +5,7 @@ description: "angular2, setup, visual studio"
 categories: ["others"]
 tags: ["angular"]
 icon: "icon-angular"
+readingTime: "4 min read"
 ---
 
 

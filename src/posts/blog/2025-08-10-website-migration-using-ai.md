@@ -5,6 +5,7 @@ description: "A hands-on exploration of AI-assisted development — from migrati
 categories: ["Web Development", "AI", "Case Study"]
 tags: ["ai", "web-development", "svelte", "automation", "coding-assistant", "frontend", "productivity"]
 icon: "robot"
+readingTime: "3 min read"
 ---
 
 # Modernizing My Website: From Jekyll to Svelte — Powered by AI

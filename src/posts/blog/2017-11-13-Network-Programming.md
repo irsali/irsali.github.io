@@ -5,6 +5,7 @@ description: "Network programming in .Net Framework"
 categories: ["others"]
 tags: ["network", ".NET Framework"]
 icon: "icon-csharp"
+readingTime: "1 min read"
 ---
 
 There are two ways found to work around Network

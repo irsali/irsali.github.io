@@ -5,6 +5,7 @@ desc: "Debugging in VS Code"
 keywords: "VS Code, debugging"
 categories: ["others"]
 tags: ["VS Code", "Debugging"]
+readingTime: "1 min read"
 ---
 
 Open the Extensions view (Ctrl+Shift+X). When the extension list

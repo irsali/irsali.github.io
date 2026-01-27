@@ -4,6 +4,7 @@ date: "2017-09-07"
 description: "Caliburn Micro"
 categories: ["others"]
 tags: ["Caliburn Micro", "Caliburn"]
+readingTime: "2 min read"
 ---
 
 Features

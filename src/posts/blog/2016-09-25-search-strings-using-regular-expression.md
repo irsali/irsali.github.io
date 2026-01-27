@@ -5,6 +5,7 @@ description: "Search string using regular expression in C#"
 categories: ["csharp"]
 tags: ["String", "Regex"]
 icon: "icon-csharp"
+readingTime: "2 min read"
 ---
 
 ## Preface

@@ -4,6 +4,7 @@ date: "2016-12-18"
 description: "Getting Started with Jekyll site"
 categories: ["others"]
 tags: ["Nasscom", "Annual", "Technology", "Conference", "Microservices", "Architecture"]
+readingTime: "2 min read"
 ---
 
 It was a great oppurtunity provided by my company `Brain Technosys Pvt. Ltd.`.  The workshop was organized by `Nasscom` in `GlobalLogic Inc.` Greater Noida on 13 Dec, 2016.

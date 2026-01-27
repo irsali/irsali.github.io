@@ -5,6 +5,7 @@ description: "Performance considerations in C# and .NET applications."
 categories: ["csharp"]
 tags: ["csharp", "performance"]
 icon: "icon-csharp"
+readingTime: "2 min read"
 ---
 
 

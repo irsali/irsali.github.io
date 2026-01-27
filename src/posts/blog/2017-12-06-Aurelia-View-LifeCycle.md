@@ -6,6 +6,7 @@ keywords: "Aurelia"
 categories: ["others"]
 tags: ["Aurelia"]
 icon: "icon-aurelia"
+readingTime: "2 min read"
 ---
 
 

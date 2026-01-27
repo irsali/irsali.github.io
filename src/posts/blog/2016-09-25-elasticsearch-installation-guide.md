@@ -4,6 +4,7 @@ date: "2016-09-25"
 description: "ElasticSearch installation guide"
 categories: ["elasticsearch"]
 tags: ["setup"]
+readingTime: "3 min read"
 ---
 
 Steps to getting started with ElasticSearch.

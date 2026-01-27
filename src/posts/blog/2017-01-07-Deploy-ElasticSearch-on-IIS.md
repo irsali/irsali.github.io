@@ -4,6 +4,7 @@ date: "2017-01-06"
 description: "Deploy ElasticSearch on IIS to make it accessible over the internet"
 categories: ["elasticsearch"]
 tags: ["Deploy", "ElasticSearch", "IIS", "Setup"]
+readingTime: "4 min read"
 ---
 
 **Deploy elastic search on IIS.**
