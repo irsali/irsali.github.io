@@ -19,6 +19,12 @@ export interface PostMetaWithUrl extends PostMeta {
 	url: string;
 }
 
+export interface BlogData {
+	posts: PostMetaWithUrl[];
+	categories: string[];
+	tags: string[];
+}
+
 export interface SlugPostDto {
 	slug: string;
 	post: {
