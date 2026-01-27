@@ -61,6 +61,10 @@
 
 <svelte:head>
 	<title>Profile | Irshad Ali</title>
+	<script>
+		var huOptions = {"appID":"irsaligithubio-598adbb","currentLanguage":"en","blocking":true,"globalCookie":false}
+	</script>
+	<script src="https://stage-app.hu-manity.co/banner/hu-banner.min.js" type="text/javascript" charset="utf-8"></script>
 </svelte:head>
 
 <!-- Dynamic radial gradient background -->
