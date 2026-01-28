@@ -1,0 +1,5 @@
+import"./Bzak7iHL.js";import"./BrF70vDP.js";import{i as o,j as s,n}from"./v0O3ks5t.js";const e={title:"Ensuring Intellisense in Visual Studio 2017 for css",date:"2017-10-06",desc:"Visual Studio 2017",keywords:"Visual Studio",categories:["others"],tags:["Visual Studio"],icon:"icon-ide",readingTime:"1 min read"},{title:p,date:c,desc:g,keywords:_,categories:m,tags:f,icon:S,readingTime:h}=e;var r=o(`<p>While working on frameworks like Angular or Aurelia, where we install
+dependencies using npm, bower. The dependency css files are not part of
+project or the way these files are part of the project(minified,
+excluded). Visual Studio is unable to provide intellisense.</p> <p>Just add the non-minified css file in project, you will see intellisense
+back in your project.</p> <p><img src="/static/blog/Visual_Studio/Visual-Studio-Ensuring-Intellisense_files/image001.png"/></p> <p>Happy Coding!</p>`,1);function a(i){var t=r();n(6),s(i,t)}const w=Object.freeze(Object.defineProperty({__proto__:null,default:a,metadata:e},Symbol.toStringTag,{value:"Module"}));export{w as _};
