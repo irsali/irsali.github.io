@@ -1,0 +1,54 @@
+import"./Bzak7iHL.js";import"./BrF70vDP.js";import{i as w,k as s,l as b,j as g,m as a,o as n}from"./v0O3ks5t.js";import{h as t}from"./IeDmrjg6.js";const h={title:"Using implicit conversion",date:"2017-01-22",description:"Using implicit conversion",categories:["csharp"],tags:["csharp"],icon:"icon-csharp",readingTime:"2 min read"},{title:A,date:M,description:T,categories:x,tags:j,icon:U,readingTime:q}=h;var v=w('<p>I have seen code like below some times back. But now i got the time to explore what it is and how can add value to when i write code. Thought to share.</p> <pre class="language-csharp"><!></pre> <p>What it actually do.</p> <p>Suppose there is a method M that asks for PostData object.</p> <pre class="language-csharp"><!></pre> <p>Then, we can simply call M by passing byte[] argument instead of <code>PostData&lt;byte[]&gt;</code>. The conversion will implicitly taken care by the compiler.</p> <pre class="language-csharp"><!></pre> <p>One more thing, that can make you excited if you have not written code like this before.</p> <pre class="language-csharp"><!></pre> <p>The part before => is equivalent to the part before <code>&#123;</code></p> <p>The part after => is body.</p> <p>Below is a examples, to make it more clear.</p> <pre class="language-csharp"><!></pre>',1);function B(u){var l=v(),p=s(b(l),2),i=a(p);t(i,()=>`<code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">implicit</span> <span class="token keyword">operator</span> <span class="token function">PostData</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> byteArray<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">PostData</span><span class="token punctuation">(</span>byteArray<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">or</span>
+
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">implicit</span> <span class="token keyword">operator</span> <span class="token function">PostData</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> byteArray<span class="token punctuation">)</span> 
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">new</span> <span class="token constructor-invocation class-name">PostData</span><span class="token punctuation">(</span>byteArray<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code>`),n(p);var o=s(p,6),r=a(o);t(r,()=>`<code class="language-csharp"><span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">M</span><span class="token punctuation">(</span><span class="token class-name">PostData</span> postData<span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">&#125;</span>
+</code>`),n(o);var e=s(o,4),d=a(e);t(d,()=>`<code class="language-csharp"><span class="token function">M</span><span class="token punctuation">(</span>byteArraay<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code>`),n(e);var c=s(e,4),y=a(c);t(y,()=>`<code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">implicit</span> <span class="token keyword">operator</span> <span class="token function">PostData</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> byteArray<span class="token punctuation">)</span> 
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">new</span> <span class="token constructor-invocation class-name">PostData</span><span class="token punctuation">(</span>byteArray<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">is</span> <span class="token class-name">equivalent</span> to 
+
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">implicit</span> <span class="token keyword">operator</span> <span class="token function">PostData</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> byteArray<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">PostData</span><span class="token punctuation">(</span>byteArray<span class="token punctuation">)</span><span class="token punctuation">;</span></code>`),n(c);var k=s(c,8),m=a(k);t(m,()=>`<code class="language-csharp"><span class="token keyword">namespace</span> <span class="token namespace">Library</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TestClass</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token comment">// we want to call M by passing byteArray or string. however method is asking for PostData object</span>
+        <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">M</span><span class="token punctuation">(</span> <span class="token class-name">PostData</span> data <span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token comment">// ...</span>
+        <span class="token punctuation">&#125;</span>
+
+        <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">M2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token class-name"><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> b <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name"><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> <span class="token punctuation">&#123;</span> <span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">42</span><span class="token punctuation">,</span> <span class="token number">6</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+            <span class="token comment">// calling M by passing byteArray</span>
+            <span class="token function">M</span><span class="token punctuation">(</span> b <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token comment">// calling M by passing string</span>
+            <span class="token function">M</span><span class="token punctuation">(</span> <span class="token string">"Hello world!"</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">PostData</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token comment">// constructor</span>
+        <span class="token keyword">public</span> <span class="token function">PostData</span><span class="token punctuation">(</span> <span class="token class-name"><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> data <span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>  <span class="token comment">/* do something */</span> <span class="token punctuation">&#125;</span>
+        <span class="token keyword">public</span> <span class="token function">PostData</span><span class="token punctuation">(</span> <span class="token class-name"><span class="token keyword">string</span></span> data <span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">/* do something */</span> <span class="token punctuation">&#125;</span>
+
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">implicit</span> <span class="token keyword">operator</span> <span class="token function">PostData</span><span class="token punctuation">(</span> <span class="token class-name"><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> byteArray <span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">PostData</span><span class="token punctuation">(</span> byteArray <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">implicit</span> <span class="token keyword">operator</span> <span class="token function">PostData</span><span class="token punctuation">(</span> <span class="token class-name"><span class="token keyword">string</span></span> data <span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">PostData</span><span class="token punctuation">(</span> data <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code>`),n(k),g(u,l)}export{B as default,h as metadata};
