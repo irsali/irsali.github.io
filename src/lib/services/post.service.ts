@@ -15,17 +15,17 @@ class PostService {
     }
 
     const modules = import.meta.glob<MarkdownModule>(
-      '../../posts/blog/*.md',
-      { eager: true }
+      '../../posts/blog/*.md'
     );
     
     const posts: PostMetaWithUrl[] = [];
     const categorySet = new Set<string>();
     const tagSet = new Set<string>();
     
-    // Single pass through all modules
-    for (const [path, mod] of Object.entries(modules)) {
+    // Single pass through all modules - now with lazy loading
+    for (const [path, importFn] of Object.entries(modules)) {
       const slug = path.split('/').pop()?.replace(/\.md$/, '');
+      const mod = await importFn(); // Lazy load each module
       const meta = mod.metadata;
       
       // Extract post data
