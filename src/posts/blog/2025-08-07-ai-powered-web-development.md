@@ -5,6 +5,7 @@ description: "Exploring the journey of building a modern profile website using A
 categories: ["Web Development", "AI", "Productivity"]
 tags: ["ai", "web-development", "productivity", "svelte", "automation", "coding-assistant"]
 icon: "robot"
+readingTime: "7 min read"
 ---
 
 ## The AI Revolution in Web Development

@@ -6,7 +6,7 @@
 
 	export let data: { posts: PostMetaWithUrl[]; categories?: string[]; tags?: string[] };
 	const { tag } = $page.params;
-	const posts = data.posts.filter((post) => post.tags?.includes(tag));
+	const posts = data.posts; // Already filtered on server
 
 	const pageSize = 10;
 	let currentPage = 1;

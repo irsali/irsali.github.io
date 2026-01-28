@@ -43,7 +43,7 @@
 
 		const script = document.createElement('script');
 		script.src = 'https://giscus.app/client.js';
-		script.setAttribute('data-repo', 'irsali/profile-blog');
+		script.setAttribute('data-repo', 'irsali/irsali.github.io');
 		script.setAttribute('data-repo-id', 'R_kgDOPSSJrg');
 		script.setAttribute('data-category', 'General');
 		script.setAttribute('data-category-id', 'DIC_kwDOPSSJrs4CtYa4');

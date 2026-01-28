@@ -1,44 +1,69 @@
-import type { MarkdownModule, PostMetaWithUrl } from '$lib/types';
-import { getReadingTime } from '$lib/utils/reading-time';
+import type { MarkdownModule, PostMetaWithUrl, BlogData } from '$lib/types';
 
 class PostService {
 
   readonly blogUrlPrefix = '/blog/';
+  private cachedData: BlogData | null = null;
 
-  async getAllPosts(): Promise<PostMetaWithUrl[]> {
+  /**
+   * Extract all blog data (posts, categories, tags) in a single pass
+   * Results are cached for subsequent calls
+   */
+  private async extractAllBlogData(): Promise<BlogData> {
+    if (this.cachedData) {
+      return this.cachedData;
+    }
+
     const modules = import.meta.glob<MarkdownModule>(
-      '../../posts/blog/*.md',
-      { eager: true }
+      '../../posts/blog/*.md'
     );
     
     const posts: PostMetaWithUrl[] = [];
+    const categorySet = new Set<string>();
+    const tagSet = new Set<string>();
     
-    for (const [path, mod] of Object.entries(modules)) {
+    // Single pass through all modules - now with lazy loading
+    for (const [path, importFn] of Object.entries(modules)) {
       const slug = path.split('/').pop()?.replace(/\.md$/, '');
-      const meta = mod.metadata ?? {};
+      const mod = await importFn(); // Lazy load each module
+      const meta = mod.metadata;
       
-      // Calculate reading time if not already present
-      if (!meta.readingTime) {
-        try {
-          // Import the raw markdown content for word counting
-          const rawContent = await import(`../../posts/blog/${slug}.md?raw`);
-          if (rawContent.default) {
-            meta.readingTime = getReadingTime(rawContent.default);
-          }
-        } catch (error) {
-          // If we can't get raw content, skip reading time calculation
-          console.warn('Could not calculate reading time for', slug);
-        }
-      }
-      
+      // Extract post data
       posts.push({
         url: `${this.blogUrlPrefix}${slug}`,
         ...meta
       } as PostMetaWithUrl);
+      
+      // Extract categories
+      meta?.categories?.forEach((cat: string) => {
+        categorySet.add(cat);
+      });
+      
+      // Extract tags
+      meta?.tags?.forEach((tag: string | Array<string>) => {
+        if (typeof tag === 'string') {
+          tagSet.add(tag);
+        } else if (Array.isArray(tag)) {
+          tag.forEach(t => tagSet.add(t));
+        }
+      });
     }
     
+    // Sort posts by date (newest first)
     posts.sort((a, b) => (a.date < b.date ? 1 : -1));
-    return posts;
+    
+    this.cachedData = {
+      posts,
+      categories: Array.from(categorySet).sort(),
+      tags: Array.from(tagSet).sort()
+    };
+    
+    return this.cachedData;
+  }
+
+  async getAllPosts(): Promise<PostMetaWithUrl[]> {
+    const data = await this.extractAllBlogData();
+    return data.posts;
   }
 
   async getAllCategoryPosts(category: string): Promise<PostMetaWithUrl[]> {
@@ -52,39 +77,20 @@ class PostService {
   }
 
   async getAllTags(): Promise<string[]> {
-    const modules = import.meta.glob<MarkdownModule>(
-      '../../posts/blog/*.md',
-      { eager: true }
-    );
-    const set = new Set<string>();
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    Object.entries(modules).forEach(([path, mod]) => {
-      mod.metadata?.tags?.forEach((tags: string | Array<string>) => {
-        if (typeof tags === 'string') {
-          set.add(tags);
-        } else if (Array.isArray(tags)) {
-          tags.forEach(tag => set.add(tag));
-        }
-      })
-    });
-
-    return Array.from(set);
+    const data = await this.extractAllBlogData();
+    return data.tags;
   }
 
   async getAllCategories(): Promise<string[]> {
-    const modules = import.meta.glob<MarkdownModule>(
-      '../../posts/blog/*.md',
-      { eager: true }
-    );
-    const set = new Set<string>();
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    Object.entries(modules).forEach(([path, mod]) => {
-      mod.metadata?.categories?.forEach(cat => {
-        set.add(cat);
-      })
-    });
+    const data = await this.extractAllBlogData();
+    return data.categories;
+  }
 
-    return Array.from(set);
+  /**
+   * Get all blog data at once - optimized for pages that need everything
+   */
+  async getAllBlogData(): Promise<BlogData> {
+    return this.extractAllBlogData();
   }
 
 }

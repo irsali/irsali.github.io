@@ -1,6 +1,8 @@
 <script lang="ts">
 	import '../app.css';
 	import { onMount } from 'svelte';
+	import { afterNavigate } from '$app/navigation';
+	import { initGtag, listenForConsent, trackPageView } from '$lib/utils/analytics';
 
 	let { children } = $props();
 	let gradientElement: HTMLDivElement;
@@ -51,16 +53,38 @@
 			attributeFilter: ['data-theme']
 		});
 
+		// Initialize Google Analytics
+		initGtag();
+
+		// Listen for consent changes
+		listenForConsent((granted) => {
+			console.log('Analytics consent:', granted ? 'granted' : 'denied');
+		});
+
 		// Cleanup on unmount
 		return () => {
 			document.removeEventListener('mousemove', handleMouseMove);
 			observer.disconnect();
 		};
 	});
+
+	// Track page views on navigation
+	afterNavigate(({ to }) => {
+		if (to?.url) {
+			trackPageView(to.url.pathname);
+		}
+	});
 </script>
 
 <svelte:head>
 	<title>Profile | Irshad Ali</title>
+	<!-- Consent Management -->
+	<script>
+		var huOptions = {"appID":"irsaligithubio-598adbb","currentLanguage":"en","blocking":true,"globalCookie":false}
+	</script>
+	<script src="https://stage-app.hu-manity.co/banner/hu-banner.min.js" type="text/javascript" charset="utf-8"></script>
+	<!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-V418YHEP1W"></script>
 </svelte:head>
 
 <!-- Dynamic radial gradient background -->

@@ -4,6 +4,7 @@ date: "2017-01-04"
 description: "Getting Started with Jekyll site"
 categories: ["others"]
 tags: ["Jekyll"]
+readingTime: "3 min read"
 ---
 
 

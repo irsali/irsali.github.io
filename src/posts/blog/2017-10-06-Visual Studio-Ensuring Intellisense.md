@@ -6,6 +6,7 @@ keywords: "Visual Studio"
 categories: ["others"]
 tags: ["Visual Studio"]
 icon: "icon-ide"
+readingTime: "1 min read"
 ---
 
 While working on frameworks like Angular or Aurelia, where we install

@@ -5,6 +5,7 @@ description: "Using implicit conversion"
 categories: ["csharp"]
 tags: ["csharp"]
 icon: icon-csharp
+readingTime: "2 min read"
 ---
 
 

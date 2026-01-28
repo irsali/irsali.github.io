@@ -5,6 +5,7 @@ description: "aurelia, breeze"
 categories: ["others"]
 tags: ["Aurelia"]
 icon: "icon-aurelia"
+readingTime: "1 min read"
 ---
 
 Getting Started

@@ -5,6 +5,7 @@ description: 'aurelia'
 categories: ['others']
 tags: ['Aurelia']
 icon: 'icon-aurelia'
+readingTime: "3 min read"
 ---
 
 # Getting Started

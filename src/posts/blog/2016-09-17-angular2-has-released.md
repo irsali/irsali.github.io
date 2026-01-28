@@ -5,6 +5,7 @@ description: "angular2"
 categories: ["others"]
 tags: ["angular"]
 icon: icon-angular
+readingTime: "2 min read"
 ---
 
 After a long wait, **[Angular2](https://angular.io/docs/ts/latest/)** final version has been released.

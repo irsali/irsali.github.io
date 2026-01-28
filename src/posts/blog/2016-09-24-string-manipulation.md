@@ -5,6 +5,7 @@ description: "string manipulation"
 categories: ["csharp"]
 tags: ["csharp"]
 icon: "icon-csharp"
+readingTime: "3 min read"
 ---
 
 ## Preface
