@@ -285,13 +285,26 @@
 
 <!-- Mobile Menu -->
 {#if showMobileMenu}
-	<div class="mobile-menu-overlay" on:click={toggleMobileMenu}>
-		<div class="mobile-menu-container" on:click|stopPropagation>
+	<div
+		class="mobile-menu-overlay"
+		role="button"
+		tabindex="0"
+		on:click={toggleMobileMenu}
+		on:keydown={(e) => e.key === 'Enter' && toggleMobileMenu()}
+	>
+		<div
+			class="mobile-menu-container"
+			role="dialog"
+			aria-modal="true"
+			tabindex="-1"
+			on:click|stopPropagation
+			on:keydown|stopPropagation
+		>
 			<!-- Header Section -->
 			<div class="mobile-menu-header">
 				<div class="profile-section">
 					<div class="profile-avatar">
-						<img src="/static/profile/profile_40.jpg" alt="Profile Picture" />
+						<img src="/static/profile/profile_40.jpg" alt={profile.name} />
 						<div class="status-indicator"></div>
 					</div>
 					<div class="profile-info">
