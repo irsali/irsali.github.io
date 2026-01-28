@@ -26,7 +26,7 @@ class PostService {
     // Single pass through all modules
     for (const [path, mod] of Object.entries(modules)) {
       const slug = path.split('/').pop()?.replace(/\.md$/, '');
-      const meta = mod.metadata ?? {};
+      const meta = mod.metadata;
       
       // Extract post data
       posts.push({
@@ -35,12 +35,12 @@ class PostService {
       } as PostMetaWithUrl);
       
       // Extract categories
-      meta.categories?.forEach((cat: string) => {
+      meta?.categories?.forEach((cat: string) => {
         categorySet.add(cat);
       });
       
       // Extract tags
-      meta.tags?.forEach((tag: string | Array<string>) => {
+      meta?.tags?.forEach((tag: string | Array<string>) => {
         if (typeof tag === 'string') {
           tagSet.add(tag);
         } else if (Array.isArray(tag)) {

@@ -4,19 +4,18 @@
 	import { X, Search, Sun, Moon } from 'lucide-svelte';
 	import { theme, toggleTheme } from '$lib/stores/theme';
 	import Preloader from '$lib/components/Preloader.svelte';
-	export let data;
+	import { postService } from '$lib/services/post.service';
+	import type { PostMetaWithUrl } from '$lib/types';
+	
 	let searchQuery = '';
 	let showSearch = false;
 	let results: any[] = [];
 	let fuse: Fuse<any>;
+	let posts: PostMetaWithUrl[] = [];
+	let postsLoaded = false;
+	let isLoadingPosts = false;
 
 	onMount(() => {
-		if (data?.posts) {
-			fuse = new Fuse(data.posts, {
-				keys: ['title', 'description', 'tags', 'categories'],
-				threshold: 0.3
-			});
-		}
 		// Keyboard shortcut Ctrl+K to open search
 		const handler = (e: KeyboardEvent) => {
 			if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
@@ -28,6 +27,27 @@
 		return () => window.removeEventListener('keydown', handler);
 	});
 
+	async function loadPostsForSearch() {
+		if (postsLoaded || isLoadingPosts) return;
+		
+		isLoadingPosts = true;
+		try {
+			const blogData = await postService.getAllBlogData();
+			posts = blogData.posts;
+			postsLoaded = true;
+			
+			// Initialize Fuse.js with loaded posts
+			fuse = new Fuse(posts, {
+				keys: ['title', 'description', 'tags', 'categories'],
+				threshold: 0.3
+			});
+		} catch (error) {
+			console.error('Failed to load posts for search:', error);
+		} finally {
+			isLoadingPosts = false;
+		}
+	}
+
 	function handleSearchInput(e: Event) {
 		searchQuery = (e.target as HTMLInputElement).value;
 		if (searchQuery.length > 0 && fuse) {
@@ -37,13 +57,20 @@
 		}
 	}
 
-	function openSearch() {
+	async function openSearch() {
 		showSearch = true;
+		
+		// Lazy load posts on first search
+		if (!postsLoaded) {
+			await loadPostsForSearch();
+		}
+		
 		setTimeout(() => {
 			const input = document.getElementById('blog-search-input');
 			if (input) input.focus();
 		}, 0);
 	}
+	
 	function closeSearch() {
 		showSearch = false;
 		searchQuery = '';
@@ -297,7 +324,7 @@
 	.search-modal {
 		position: relative;
 		margin-top: 5vh;
-		max-height: 70vh;
+		max-height: 90vh;
 		width: 100%;
 		overflow-y: auto;
 		border: 1px solid var(--color-modal-border);
